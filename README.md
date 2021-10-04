@@ -15,10 +15,10 @@ The capstone will build upon the knowledge you have gained in the course in orde
 
 
 ## Contract addresses on rinkeby test network and ABI
-![](/img/contracts.PNG)
+![contracts](images/contracts.PNG)
 
 ## Migration on rinkeby
-![](/img/migration.PNG)
+![migration](images/migration.PNG)
 
 # ABI
  The ABI is on `eth-contracts/build/contracts` folder
