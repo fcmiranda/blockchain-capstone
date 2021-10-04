@@ -18,11 +18,7 @@ contract('ERC721MintableComplete', accounts => {
         before(async() => { 
             contract = await contractDefinition.new(name, symbol, {from: account_one});
             currentOwner = account_one;
-        });
-
-        it('should not allow unauthorized address to transfer ownership', async() => {
-            await expectToRevert(contract.transferOwnership(account_two, {from: account_two}), 'Caller is not the contract owner');
-        });
+        });  
 
         it('should return contract owner', async() => { 
             expect(await contract.owner({from: account_two})).to.equal(currentOwner); ;
@@ -41,15 +37,7 @@ contract('ERC721MintableComplete', accounts => {
     describe('Test suite: Pausable inherited', function () {
         before(async() => { 
             contract = await contractDefinition.new(name, symbol, {from: account_one});
-        });
-
-        it('should not allow unauthorized address to pause the contract', async() => {
-            await expectToRevert(contract.pause({from: account_two}), 'Caller is not the contract owner');
-        });
-
-        it('should not allow unauthorized address to unpause the contract', async() => {
-            await expectToRevert(contract.unpause({from: account_two}), 'Caller is not the contract owner');
-        });
+        }); 
 
         it('should allow owner to pause the contract and emit event', async() => {
             let tx = await contract.pause({from: account_one});
