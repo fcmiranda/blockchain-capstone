@@ -47,7 +47,7 @@ npm -v
 ```
 npm i ganache-cli -g
 ```
-####install truffle globally
+###install truffle globally
 ```
 npm i truffle -g
 ```
@@ -57,7 +57,7 @@ npm i truffle -g
 ```
 ganache-cli
 ```
-####In another  window, compile the contracts: They will be generated in folder ```build\contracts```.
+###In another  window, compile the contracts: They will be generated in folder ```build\contracts```.
 
 ####Run the test command
 ```
