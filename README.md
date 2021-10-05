@@ -15,17 +15,23 @@ The capstone will build upon the knowledge you have gained in the course in orde
 
 
 ## Contract addresses on rinkeby test network and ABI
-![contracts](images/contracts.PNG)
+![contracts](images/contracts.png)
 
 ## Migration on rinkeby
-![migration](images/migration.PNG)
+![migration](images/migration.png)
 
 # ABI
  The ABI is on `eth-contracts/build/contracts` folder
  
-## Etherscan / OpenSea 
-- Minter : `https://testnets.opensea.io/assets/0xba62b9e00c0a294a97b94ec776c9500b6707955f/21`
-- Buyer : `https://testnets.opensea.io/0x722416d16f8fbdb4e8c54bfc83e8208fc3d4b626`  
+# OpenSea
+- OpenSea store link `https://testnets.opensea.io/collection/token-flp-home`
+- Assets
+  - `https://testnets.opensea.io/assets/0xba62b9e00c0a294a97b94ec776c9500b6707955f/16`
+  - `https://testnets.opensea.io/assets/0xba62b9e00c0a294a97b94ec776c9500b6707955f/17`
+  - `https://testnets.opensea.io/assets/0xba62b9e00c0a294a97b94ec776c9500b6707955f/20`
+  - `https://testnets.opensea.io/assets/0xba62b9e00c0a294a97b94ec776c9500b6707955f/5`
+  - `https://testnets.opensea.io/assets/0xba62b9e00c0a294a97b94ec776c9500b6707955f/2`
+## Etherscan 
 - Token contract : `https://rinkeby.etherscan.io/token/0xba62b9e00c0a294a97b94ec776c9500b6707955f`
 
 ## Getting Started
@@ -37,29 +43,29 @@ The capstone will build upon the knowledge you have gained in the course in orde
 * MetaMask extension installed in your browser and few ethers on Rinkeby Test Network.
 * [truffle](https://www.npmjs.com/package/truffle) Development environment, testing framework and asset pipeline for Ethereum
 
-#####check node and npm versions
+####check node and npm versions
 ```
 node -v
 npm -v
 ```
 
-#####install ganache globally
+####install ganache globally
 ```
 npm i ganache-cli -g
 ```
-#####install truffle globally
+####install truffle globally
 ```
 npm i truffle -g
 ```
 
 ## Running the tests
-#####Start a local ganache-cli instance
+####Start a local ganache-cli instance
 ```
 ganache-cli
 ```
-#####In another  window, compile the contracts: They will be generated in folder ```build\contracts```.
+####In another  window, compile the contracts: They will be generated in folder ```build\contracts```.
 
-#####Run the test command
+####Run the test command
 ```
 cd eth-contracts
 truffle develop
@@ -68,26 +74,26 @@ test
 ```
 
 ## Generating the proof from zokrates (on windows 10)
-####Navigate to project folder
+###Navigate to project folder
 ` cd zokrates\code\`
 
-####Run the zokrates docker image
+###Run the zokrates docker image
 `docker run -v $(pwd):/home/zokrates/code -ti zokrates/zokrates:0.3.0 /bin/bash`
 
-####Compile the program 
+###Compile the program 
 ```
 cd code
 ~/zokrates compile -i square/square.code
 ```
 
-####Generate the trusted setup
+###Generate the trusted setup
 `~/zokrates setup`
 
-####Compute witness for your desired pair of number
+###Compute witness for your desired pair of number
 `~/zokrates compute-witness -a number square`
 
-####Generate proof
+###Generate proof
 `~/zokrates generate-proof` 
 
-####(Optional) Generate verifier.sol
+###(Optional) Generate verifier.sol
 `~/zokrates export-verifier	`
