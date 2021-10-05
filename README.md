@@ -96,4 +96,8 @@ cd code
 `~/zokrates generate-proof` 
 
 ###(Optional) Generate verifier.sol
+<<<<<<< HEAD
 `~/zokrates export-verifier	`
+=======
+`~/zokrates export-verifier	`
+>>>>>>> 8d972df0c8a1f7eeb85ee7921223d437e784340e
